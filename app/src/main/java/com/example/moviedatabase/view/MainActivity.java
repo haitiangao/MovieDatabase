@@ -105,5 +105,11 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.User
 
     }
 
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        unregisterReceiver(internetReciever);
+
+    }
 
 }
