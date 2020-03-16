@@ -52,7 +52,9 @@ public class DisplayMovieActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences =
                 this.getSharedPreferences(Constants.PREFERENCE_KEY, MODE_PRIVATE);
         String connection = sharedPreferences.getString(Constants.PREFERENCE_KEY,"Disconnected");
-        if (connection== "Connected") {
+        Log.d("TAG_H", "Connectivity: "+ connection);
+
+        if (connection.equals("Connected")) {
             Log.d("TAG_H", "Connectivity: "+ connection);
 
             RequestOptions myOptions = new RequestOptions()

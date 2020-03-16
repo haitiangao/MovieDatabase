@@ -53,7 +53,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 context.getSharedPreferences(Constants.PREFERENCE_KEY,Context.MODE_PRIVATE);
         String connection = sharedPreferences.getString(Constants.PREFERENCE_KEY,"Disconnected");
 
-        if (connection== "Connected"){
+        if (connection.equals("Connected")){
             RequestOptions myOptions = new RequestOptions()
                     .override(400, 400)
                     .fitCenter();
